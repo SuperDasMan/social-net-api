@@ -1,0 +1,28 @@
+{
+  "name": "social-net-api",
+  "version": "1.0.0",
+  "description": "API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperDasMan/social-net-api.git"
+  },
+  "author": "Josh West",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SuperDasMan/social-net-api/issues"
+  },
+  "homepage": "https://github.com/SuperDasMan/social-net-api#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "jest": "^27.5.1",
+    "mongoose": "^6.3.0"
+  }
+}
