@@ -24,11 +24,11 @@ JavaScript - ES6 - jQuery - Node
 
 ## Installation
 
-Clone or download a .zip file of the repository. Using Node.js, open a terminal and run `npm i` to install the necessary packages.
+Clone or download a .zip file of the repository. Using Node.js, open a terminal in the project root folder and run `npm i` to install the necessary packages.
 
 ## Usage
 
-Using Node.js, open a terminal in the project root folder and run `npm start`. Open Insomnia to enter data using Json format.
+Using Node.js, open a terminal in the project root folder and run `npm start` to start the server. Open Insomnia to enter data using JSON format.
 
 ## License
 
@@ -40,11 +40,11 @@ Check out the badges hosted by [shields.io](https://shields.io/).
 
 ## Contributing
 
-undefined
+No other contributors worked on this project.
 
 ## Tests
 
-undefined
+API endpoints were tested using Insomnia.
 
 ## Questions
 
