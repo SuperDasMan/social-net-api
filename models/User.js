@@ -1,8 +1,12 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const UserSchema = new Schema(
   {
+    userId: {
+      type: Schema.Types.ObjectId,
+      default: () => new Types.ObjectId(),
+    },
     username: {
       type: String,
       unique: true,
@@ -14,10 +18,11 @@ const UserSchema = new Schema(
       required: true,
       unique: true,
       trim: true,
+      match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/],
     },
     thoughts: [
       {
-        type: Schema.Types.ObjectId,
+        type: String,
         ref: 'Thought',
       },
     ],
@@ -27,6 +32,11 @@ const UserSchema = new Schema(
         ref: 'User',
       },
     ],
+    createdAt: {
+      type: Date,
+      default: Date.now,
+      get: (createdAtVal) => dateFormat(createdAtVal),
+    },
   },
   {
     toJSON: {
@@ -40,10 +50,7 @@ const UserSchema = new Schema(
 
 // get total count of friends and reactions on retrieval
 UserSchema.virtual('friendCount').get(function () {
-  return this.friends.reduce(
-    (total, friend) => total + friend.reactions.length + 1,
-    0
-  );
+  return this.friends.length;
 });
 
 const User = model('User', UserSchema);
