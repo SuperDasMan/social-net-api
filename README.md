@@ -34,7 +34,7 @@ View a walkthrough on [starting the server](https://drive.google.com/file/d/12Ev
 
 Or watch this [server gif](https://github.com/SuperDasMan/social-net-api/blob/develop/assets/videos/SNA-Server.gif)![server gif](https://github.com/SuperDasMan/social-net-api/blob/develop/assets/videos/SNA-Server.gif) 
 
-and this [API gif](https://github.com/SuperDasMan/social-net-api/blob/develop/assets/videos/SNA-API.gif)![API gif](https://github.com/SuperDasMan/social-net-api/blob/develop/assets/videos/SNA-API.gif) for a glimpse of the app in action.
+  and  this  [API gif](https://github.com/SuperDasMan/social-net-api/blob/develop/assets/videos/SNA-API.gif) ![API gif](https://github.com/SuperDasMan/social-net-api/blob/develop/assets/videos/SNA-API.gif) for a glimpse of the app in action.
 
 ## License
 
