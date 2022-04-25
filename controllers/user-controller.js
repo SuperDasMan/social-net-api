@@ -49,7 +49,13 @@ const userController = {
   // createUser
   createUser({ body }, res) {
     User.create(body)
-      .then((dbUserData) => res.json(dbUserData))
+      .then((dbUserData) =>
+        res.json({
+          dbUserData,
+          message:
+            'Congratulations! Your account has been successfully created!',
+        })
+      )
       .catch((err) => res.status(400).json(err));
   },
 
@@ -64,7 +70,10 @@ const userController = {
           res.status(404).json({ message: 'No user found with this id!' });
           return;
         }
-        res.json(dbUserData);
+        res.json({
+          dbUserData,
+          message: 'Your account has been successfully updated!',
+        });
       })
       .catch((err) => res.json(err));
   },
@@ -77,7 +86,10 @@ const userController = {
           res.status(404).json({ message: 'No User with this particular ID!' });
           return;
         }
-        res.json(dbUserData);
+        res.json({
+          dbUserData,
+          message: 'This account has been successfully deleted!',
+        });
       })
       .catch((err) => res.json(err));
   },
@@ -96,7 +108,10 @@ const userController = {
           res.status(404).json({ message: 'No user found with this id!' });
           return;
         }
-        res.json(dbUsersData);
+        res.json({
+          dbUsersData,
+          message: 'Congratulations on making a new friend!',
+        });
       })
       .catch((err) => res.json(err));
   },
@@ -114,7 +129,10 @@ const userController = {
           res.status(404).json({ message: 'No friend found with this id!' });
           return;
         }
-        res.json(dbUsersData);
+        res.json({
+          dbUsersData,
+          message: 'This user is no longer your friend!',
+        });
       })
       .catch((err) => res.status(400).json(err));
   },
