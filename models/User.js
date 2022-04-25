@@ -3,10 +3,10 @@ const dateFormat = require('../utils/dateFormat');
 
 const UserSchema = new Schema(
   {
-    userId: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(),
-    },
+    // userId: {
+    //   type: Schema.Types.ObjectId,
+    //   default: () => new Types.ObjectId(),
+    // },
     username: {
       type: String,
       unique: true,
@@ -22,7 +22,7 @@ const UserSchema = new Schema(
     },
     thoughts: [
       {
-        type: String,
+        type: Schema.Types.ObjectId,
         ref: 'Thought',
       },
     ],
